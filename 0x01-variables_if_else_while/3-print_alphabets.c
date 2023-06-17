@@ -1,11 +1,10 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
  * Return: Always 0 (Success)
  */
 
-int main (void)
+int main(void)
 {
 	char c;
 
@@ -24,6 +23,6 @@ int main (void)
 		       d++;
 		}
 	putchar ('\n');
-	return (0);
+	return(0);
 }
 
