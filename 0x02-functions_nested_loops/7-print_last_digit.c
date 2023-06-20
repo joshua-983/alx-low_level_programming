@@ -8,6 +8,7 @@
 
 {
 	int last;
+
 	last = n % 10;
 	if (last < 0)
    	{
@@ -15,3 +16,4 @@
 	}
 	_putchar(last + 0);
 	return (last);
+}
