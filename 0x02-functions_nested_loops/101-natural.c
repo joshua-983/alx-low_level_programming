@@ -12,10 +12,10 @@ int main(void)
 
 	while (i < 1024)
 	{
-	if 
+	if
 	((i % 3 == 0) || (i % 5 == 0))
 	{
-	z+= i;
+	z + = i;
 	}
 	i++;
 	}
