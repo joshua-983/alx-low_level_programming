@@ -17,7 +17,7 @@ length_of_string = 0
 	{
 	length_of_string++;
 	}
-	for (z = 0; src[z] != '\0'; z++,length_of_string ++)
+	for (z = 0; src[z] != '\0'; z++, length_of_string++)
 	{
 	dest[lenth_of_string] = src[j];
 	}
