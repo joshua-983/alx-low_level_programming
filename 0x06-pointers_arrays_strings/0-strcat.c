@@ -7,12 +7,13 @@
  * Return: pointer to destinationstring.
  */
 
-char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src);
 
 {
-int length_of_string, z;
 
-length_of_string = 0
+int length_of_string, z
+
+length_of_string = 0;
 	while (dest[length_of_string] != '\0')
 	{
 	length_of_string++;
