@@ -1,4 +1,5 @@
-#include "main.h"
+#include <stdio.h>
+#include <string.h>
 
 /**
  * leet - function that encodes a string into 1337.
@@ -12,30 +13,31 @@ i * letters l and L are replaced by 1
  * Return: pointer to s.
  */
 
-char *leet(char *s)
+char *leet(char *str) 
 {
-	int string_length, leetCount;
-	char leetletters[] = "aEeEoOtTlL";
-	char leetNums[] = "4433007711";
+	char *ptr = str;
 
-/*scan through string */
-
-	string_length = 0;
-
-	while (s[string_length] != '\0')
-
-/* check whether leet is found */
+	while (*ptr != '\0') 
 	{
-	leetCount = 0;
-	while (leetCount < 10)
+        if (*ptr == 'a' || *ptr == 'A') 
 	{
-	if (leetletters[leetCount] == s[string_length])
+	*ptr = '4';
+        } else if (*ptr == 'e' || *ptr == 'E') 
 	{
-	s[string_length] = leetNums[leetCount];
-	leetCount++;
+	*ptr = '3';
+        } else if (*ptr == 'o' || *ptr == 'O') 
+	{
+	*ptr = '0';
+        } else if (*ptr == 't' || *ptr == 'T') 
+	{
+	*ptr = '7';
+        } else if (*ptr == 'l' || *ptr == 'L') 
+	{
+	*ptr = '1';
 	}
-	string_length++;
+	ptr++;
 	}
-	return (s);
-	}
+
+	return str;
 }
+
