@@ -3,19 +3,18 @@
  * _memset - fill a block of memory with a specific value
  * @s: stsrting address of memory to be filled
  * @b: the desired valuee
- * @n. number of bytes to be changed
+ * @n: number of bytes to be changed
  * Return: change array with new value for n bytes.
  */
 
 char *_memset(char *s, char b, unsigned int n)
 
 {
-        int i = 0;
+	unsigned int i;
 
-        for (; n > 0; i++)
-        {
-        s[i] = b;
-        n--;
-        }
-        return (s);
+	for (i = 0; i < n; i++)
+
+	s[i] = b;
+
+	return (s);
 }
