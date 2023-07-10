@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * array - array of chars
+ *create_array - array of chars
  * @size: array size
  * @c: char of an array
  *
@@ -21,7 +21,7 @@ char *create_array(unsigned int size, char c)
 
 	if (s == NULL)
 		return (NULL);
-	for (AB = 0; AB < size; AB++)
+	for (AB == 0; AB < size; AB++)
 	{
 		s[AB] = c;
 	}
