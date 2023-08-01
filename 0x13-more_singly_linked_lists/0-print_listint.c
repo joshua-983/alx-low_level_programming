@@ -1,4 +1,4 @@
-#include <stido.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
 
@@ -9,13 +9,13 @@
  * Return: node
  */
  
- size_t print_listint(const listint_t *h);
+ size_t print_listint(const listint_t *h)
 {
-	size_t ABC = 0
+	size_t ABC = 0;
 		while (h)
 		{
-		printf("d%\n", h->n);
-		h = h->forward;
+		printf("%d\n", h->n);
+		h = h->next;
 		ABC++;
 		}
 		return (ABC);
