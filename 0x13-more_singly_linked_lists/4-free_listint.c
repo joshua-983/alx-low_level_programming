@@ -2,13 +2,14 @@
 
 /**
  * free_listint - linked list has to be freed
- * @ head: listint_list
+ * @head: listint_list yet to freed
  */
 
 void free_listint(listint_t *head)
 
 {
 	listint_t *temp;
+
 	while (head)
 	{
 		temp = head->next;
