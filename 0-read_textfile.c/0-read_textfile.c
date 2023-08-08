@@ -11,33 +11,21 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 
 {
-	int fd; /* file descriptor */
-	ssize_t nread, nwrite;
+	char *buf;
+	ssize_t fd; /* FILE DESCRIPTOR*/
+	ssize_t w; /* NUMBER OF BYTES WRTTEN AND READ*/
+	ssize_t t;
 
-	if (filename == NULL)
-	return (0);
-
-	/* the files need to be wrtten in READONLY */
-	fd = open(filename, O_RDONLY);
-
+	fd = open(filename, O_RDONLY); /*CHECK READ ONLY FILE*/
 	if (fd == -1)
-	return (0);
-
-	/* There is the need to allocate a memory here */
-	buf = malloc(sizeof(char) * letters);
-	if (buf == NULL)
-	return (0);
-
-	nread = read(fd, buf, letters);
-	if (nread == -1)
-	return (0);
-
-	nwrite = write(STDOUT_FILENO, buf, nread);
-
-	if (nwrite == -1 || nwrite != nread)
-	return (0);
+		return (0);
+	buf = malloc(sizeof(char) * letters); /* THE NEED FOR MEMORY ALOCATION*/
+	t = read(fd, buf, letters);
+	w = write(STDOUT_FILENO, buf, t);
 
 	free(buf);
 	close(fd);
-	return (nwrite);
+	/*RETURN THE NUMBER OF BYTES WRITTEN*/
+	return (w);
+
 }
