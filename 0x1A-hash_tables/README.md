@@ -1,0 +1,3 @@
+A hash table, also known as a hash map, is a data structure that allows you to store and retrieve key-value pairs efficiently. It is based on the concept of hashing, where you use a hash function to convert a key into an index in an array, and then you store the value associated with that key at that index.
+
+Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash collisions where the hash function generates the same index for more than one key. Such collisions are typically accommodated in some way.
