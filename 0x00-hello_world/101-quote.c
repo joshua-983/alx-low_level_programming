@@ -1,13 +1,14 @@
 #include <unistd.h>
+#include <string.h>
+
 /**
- * main - prints "and that piece of art is useful" - Dora Korpar, 2015-10-19",
- * followed by a newline, to standard error.
- * Return: Always 1.
+ * main - Entry
+ * Return: 0 (success)
  */
 int main(void)
-
 {
-	write(2, "and that piece of art is useful\" -Dora Korpar, 2015-10-19\n", 59);
-return (1);
-
+	char *str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	write(2, str, strlen(str) + 1);
+	
+	return (0);
 }
